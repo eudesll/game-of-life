@@ -1,0 +1,22 @@
+body {
+	background-color: #ededed;
+}
+
+.container {
+	background-color: white;
+	padding-bottom: 20px;
+}
+
+.header-gol {
+	background-color: #363535;
+	border-radius: 25px;
+	color: white;
+}
+
+.page-header {
+	margin-top: 10px
+}
+
+.labels {
+	margin-top: 6px;
+}
