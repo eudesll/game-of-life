@@ -10,61 +10,72 @@
 	<link href="resources/css/main.css" rel="stylesheet" />
 </head>
 <body>
-	<div class="container">
-		<div class="page-header row">
-			<div class="col-md-offset-1 col-md-4 text-center header-gol">
-				<h1>Game Of Life</h1>
-				<p>An implementation of Conway's "Game of Life"</p>
-			</div>
-			<div class="col-md-offset-1 col-md-6 row">				
-				<div class="col-md-5 labels">	
-					<p><b>Generations:&nbsp;</b><span id="generationLabel"></span></p>
-					<p><b>Live Cells:&nbsp;</b><span id="liveCellsLabel"></span></p>
-					<p><b>Rule:&nbsp;</b><span id="ruleLabel"></span></p>
-				</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4 text-center">
+				<h3>Game <span class="sub-title">Of</span> Life</h3>
+				<p>An implementation of Conway's <span class="orange-color">"</span>Game of Life<span class="orange-color">"</span></p>
 
-				<div class="col-md-6 labels">
-					<form class="form-horizontal">
-						<div class="form-group">
-							<label for="rule" class="col-sm-3 control-label">Pattern</label>
-							<div class="col-sm-9">
+				<table class="table table-condensed">
+					<tr>
+						<th>Generations</th>
+						<th>Live Cells</th>
+						<th>Rule</th>
+					</tr>
+					<tr>
+						<td><span id="generationLabel"></span></td>
+						<td><span id="liveCellsLabel"></span></td>
+						<td><span id="ruleLabel"></span></td>
+					</tr>
+				</table>
+
+				<form class="form">
+					<div class="row">
+						<div class="col-md-6 text-center">
+							<div class="form-group">
+								<label for="rule" class="col-sm-3 control-label">Pattern</label>
 								<input type="text" name="linesQuantity" class="form-control" id="rule" value="23/3" placeholder="Pattern">
 							</div>
 						</div>
-						<div class="form-group">
-							<label for="linesQuantity" class="col-sm-3 control-label">Zoom</label>
-							<div class="col-sm-9">
+
+						<div class="col-md-6 text-center">
+							<div class="form-group">
+								<label for="linesQuantity" class="col-sm-3 control-label">Zoom</label>
 								<input type="range" name="linesQuantity" class="form-control" id="linesQuantity" value="100" min="10" max="200">
 							</div>
 						</div>
-					</form>					
-				</div>				
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="col-md-10 text-center">
-				<canvas id="gameOfLife" width="1000" height="500"></canvas>
-			</div>
-			<div class="col-md-2 text-right">
-				<div class="ctrls-container">
-					<button id="run" class="btn btn-default">Run&nbsp;</button>
-					<button id="step" class="btn btn-default">Step</button>
-					
-					<div class="text-center">
+					</div>
+				</form>
+				
+				<div class="well">
+					<p><b>Action Buttons</b></p>
+					<div class="btn-group" role="group" aria-label="...">
+						<button id="run" class="btn btn-default">Run&nbsp;</button>
+						<button id="step" class="btn btn-default">Step</button>
 						<button id="reset" class="btn btn-default model-buttons">Reset</button>
 					</div>
 				</div>
-				<div class="ctrls-container text-center">
-					<hr />
+				
+				<div class="well">
 					<p><b>Create Models</b></p>
-					<button id="acorn" class="btn btn-default model-buttons">Acorn</button>
-					<button id="gliderGun" class="btn btn-default model-buttons">Glider Gun</button>
-					<button id="dieHard" class="btn btn-default model-buttons">Die Hard</button>
-					<button id="line" class="btn btn-default model-buttons">Line</button>
+					<div class="btn-group" role="group" aria-label="...">
+						<button id="acorn" class="btn btn-default model-buttons">Acorn</button>
+						<button id="gliderGun" class="btn btn-default model-buttons">Glider Gun</button>
+						<button id="dieHard" class="btn btn-default model-buttons">Die Hard</button>
+						<button id="line" class="btn btn-default model-buttons">Line</button>
+					</div>
 				</div>
 			</div>
+
+			<div class="col-md-8">
+				<br /><br />
+				<canvas id="gameOfLife" width="1000" height="500"></canvas>				
+			</div>
 		</div>
+	</div>
+
+	<div class="container text-center">
+		
 	</div>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
