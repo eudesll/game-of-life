@@ -1,32 +1,35 @@
 body {
-	background-color: #ededed;
-}
-
-.container {
-	background-color: white;
-	padding-bottom: 20px;
-}
-
-.header-gol {
-	background-color: #363535;
-	border-radius: 25px;
+	background-color: #333;
 	color: white;
 }
 
-.page-header {
-	margin-top: 10px
+.sub-title {
+  color: #777;
 }
 
-.labels {
-	margin-top: 6px;
+.orange-color {
+  color: orange;
 }
 
-.ctrls-container {
-	margin-top: 10%;
-	margin-left: 30%;
+.info-table-container {
+	width: 30%;
 }
 
-.model-buttons {
-	width: 85%;
-	margin-top: 5px;
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+	border-top-color: orange;
+}
+
+.table th {
+	text-align: center;
+}
+
+.well {
+	background-color: #333;
+	border-color: #777;
+}
+
+canvas {
+  background-color: ghostwhite; 
+  width: 100%;
+  height: auto;
 }
